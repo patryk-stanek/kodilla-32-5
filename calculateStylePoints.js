@@ -3,8 +3,13 @@ const calculateStylePoints = (styleNotes) => {
 
     //checking notes
     styleNotes.forEach(arg => {
-        if (arg < 0 || arg > 20 || (arg % 0.5 != 0)) {
-            return console.log('Incorrect style points!');
+        if (typeof arg != 'number') {
+            arg = Number(arg);
+
+            !isNaN(arg) ? stylePoints.push(arg) : stylePoints.push(0);
+
+        } else if (arg < 0 || arg > 20 || (arg % 0.5 != 0)) {
+            stylePoints.push(0);
         } else {
             stylePoints.push(arg);
         }
@@ -20,10 +25,8 @@ const calculateStylePoints = (styleNotes) => {
     //calculating style points
     const totalStylePoints = stylePoints.reduce(reducer);
 
-    console.log(totalStylePoints);
+    // console.log(totalStylePoints);
     return totalStylePoints;
 };
-
-// calculateStylePoints(16, 17, 16.5, 16, 18);
 
 module.exports = calculateStylePoints;

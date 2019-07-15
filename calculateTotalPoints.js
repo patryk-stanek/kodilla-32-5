@@ -10,6 +10,6 @@ const calculateTotalPoints = (distance, hillSize, styleNotes, kPoint, windFactor
     return totalPoints
 }
 
-calculateTotalPoints(227.5, 225, ([18, 18.5, 17.5, 18.5, 18.5]), 200, 8.5, -8.5);
+calculateTotalPoints(227.5, 225, [18, 18.5, 17.5, 18.5, 18.5], 200, 8.5, -8.5);
 
 module.exports = calculateTotalPoints;

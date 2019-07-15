@@ -1,2 +1,3 @@
-const asser = require('assert');
+const assert = require('assert');
 const calculateTotalPoints = require('./calculateTotalPoints');
+

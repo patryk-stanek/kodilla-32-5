@@ -9,7 +9,7 @@ describe('calculateDistancePoints', () => {
             const exptected = 0;
 
             assert.equal(actual, exptected);
-        })
+        });
     });
     describe('distance', () => {
         it('should return 0 if value is NaN', () => {
